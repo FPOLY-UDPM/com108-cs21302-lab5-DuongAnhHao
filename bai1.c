@@ -1,7 +1,7 @@
 /******************************************************************************
- * Họ và tên: [ĐIỀN TÊN TẠI ĐÂY]
- * MSSV:      [ĐIỀN MSSV TẠI ĐÂY]
- * Lớp:       [ĐIỀN LỚP TẠI ĐÂY]
+ * Họ và tên: [Dương Anh Hào]
+ * MSSV:      [PS44395]
+ * Lớp:       [CS21302]
  *****************************************************************************/
 
 //  BÀI 1: XÂY DỰNG CHƯƠNG TRÌNH TÌM GIÁ TRỊ LỚN NHẤT TRONG 3 SỐ  
@@ -12,18 +12,39 @@
 
 #include <stdio.h>
 
-// //Tạo hàm 
-// int tenHam(so1, so2, so3){ 
-// int max; 
-// //Cách giải để tìm ra số lớn nhất 
-// return max; 
-// } 
+// Tạo hàm tìm số lớn nhất trong 3 số
+int timMax(int so1, int so2, int so3) {
+    int max = so1;
+
+    if (so2 > max) {
+        max = so2;
+    }
+
+    if (so3 > max) {
+        max = so3;
+    }
+
+    return max;
+}
 
 int main() {
+    int a, b, c;
 
-    // //Gọi hàm trong hàm main 
-    // //ví dụ 
-    // int soMax = temHam(3,5,10)
-    
+    // Nhập 3 số từ bàn phím
+    printf("Nhap so thu nhat: ");
+    scanf("%d", &a);
+
+    printf("Nhap so thu hai: ");
+    scanf("%d", &b);
+
+    printf("Nhap so thu ba: ");
+    scanf("%d", &c);
+
+    // Gọi hàm tìm số lớn nhất
+    int soMax = timMax(a, b, c);
+
+    // Xuất kết quả
+    printf("So lon nhat trong 3 so la: %d", soMax);
+
     return 0;
 }
